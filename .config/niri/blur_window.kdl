@@ -1,0 +1,134 @@
+blur {
+    passes 3 
+    offset 3
+    noise 0.02
+    saturation 1.5
+}
+
+window-rule {
+    geometry-corner-radius 3
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="^code$"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="^antigravity-ide$"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="^obsidian$"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+window-rule {
+    match app-id=r#"^QQ$"#
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="^Chatgpt$"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="^google-chrome$"
+    opacity 1.0
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="kitty"
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+// system
+
+window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+window-rule {
+    match app-id=r#"^gnome-control-center$"#
+    match app-id=r#"^pavucontrol$"#
+    match app-id=r#"^nm-connection-editor$"#
+    default-column-width { proportion 0.5; }
+    open-floating false
+}
+window-rule {
+    match app-id=r#"^gnome-calculator$"#
+    match app-id=r#"^galculator$"#
+    match app-id=r#"^blueman-manager$"#
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id=r#"^xdg-desktop-portal$"#
+    open-floating true
+}
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="zoom"
+    open-floating true
+}
+// Open dms windows as floating by default
+window-rule {
+    match app-id=r#"org.quickshell$"#
+    match app-id=r#"com.danklinux.dms$"#
+    open-floating true
+}

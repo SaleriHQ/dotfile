@@ -1,0 +1,37 @@
+{
+    "sources": [
+        {
+            "enabled": true,
+            "name": "Noctalia Plugins",
+            "url": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        {
+            "enabled": true,
+            "name": "fumo_rotate",
+            "url": "https://github.com/wppopqpu/noctalia_plugins"
+        }
+    ],
+    "states": {
+        "7deaf5:fumo_rotate": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/wppopqpu/noctalia_plugins"
+        },
+        "clipboard": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "kaomoji-provider": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "mpris-lyric": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "screen-toolkit": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        }
+    },
+    "version": 2
+}

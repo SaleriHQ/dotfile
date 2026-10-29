@@ -1,0 +1,35 @@
+binds {
+    // Core Noctalia binds
+    Alt+W { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    Alt+Y { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }
+    Alt+S { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    Alt+Comma { spawn "noctalia" "msg" "settings-toggle"; }
+    Alt+Ctrl+S { spawn "noctalia" "msg" "screenshot-annotate"; }
+    Ctrl+Shift+P { screenshot-screen; }
+
+    Alt+H { focus-column-left; }
+    Alt+J { focus-workspace-down; }
+    Alt+K { focus-workspace-up; }
+    Alt+L { focus-column-right; }
+    Alt+Shift+H { move-column-left; }
+    Alt+Shift+J { move-column-to-workspace-down; }
+    Alt+Shift+K { move-column-to-workspace-up; }
+    Alt+Shift+L { move-column-right; }
+    Alt+U { focus-window-down; }
+    Alt+I { focus-window-up; }
+
+    Alt+Equal { set-column-width "+10%"; }
+    Alt+Minus { set-column-width "-10%"; }
+    Alt+Shift+Equal { set-window-height "+10%"; }
+    Alt+Shift+Minus { set-window-height "-10%"; }
+    Alt+F { maximize-column; }
+
+   Alt+E { spawn-sh "niri msg action move-window-to-floating && niri msg action set-column-width 80% && niri msg action set-window-height 80% && niri msg action center-column && niri msg action center-window"; }
+   Alt+Shift+E { spawn-sh "niri msg action move-window-to-tiling && niri msg action set-column-width 50% && niri msg action set-window-height 100%"; }
+
+    Alt+Q repeat=false { close-window; }
+    Alt+Shift+T { toggle-window-floating; }
+
+    Alt+T hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
+    Alt+D repeat=false { toggle-overview; }
+}
